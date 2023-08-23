@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.Fragments.Frag1">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/quoteTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Random code will appear here."
+            android:textSize="18sp"
+            android:fontFamily="@font/pt"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000"
+            android:layout_gravity="center"
+            android:id="@+id/quoteButton"
+            android:text="Refresh"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VEHICLES"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/pt"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler_view"
+
+            android:layout_marginBottom="16sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

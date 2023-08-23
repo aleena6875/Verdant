@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="@drawable/f1"
+    tools:context=".View.Fragments.Frag2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="257dp"
+        android:id="@+id/linear_layout"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/countrytextView"
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:fontFamily="@font/pt"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/commonnametext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pt"
+            android:textSize="18sp"
+            android:text="TextView"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/mfridtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="18sp"
+            android:fontFamily="@font/pt"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/mfrnametext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="18sp"
+            android:fontFamily="@font/pt"
+            android:padding="16dp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+        android:layout_width="412dp"
+        android:id="@+id/recyclerview2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="300dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
