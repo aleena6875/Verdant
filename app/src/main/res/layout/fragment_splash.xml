@@ -31,7 +31,7 @@
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:gravity="center_horizontal"
-            android:text="Verdant"
+            android:text="@string/verdant"
             android:textSize="39dp"
             android:fontFamily="@font/tt"
             app:layout_constraintBottom_toBottomOf="@id/logo"

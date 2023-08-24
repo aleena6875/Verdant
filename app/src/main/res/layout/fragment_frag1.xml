@@ -15,7 +15,7 @@
             android:id="@+id/quoteTextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Random code will appear here."
+            android:text="@string/random_code_will_appear_here"
             android:textSize="18sp"
             android:fontFamily="@font/pt"
             android:gravity="center"
@@ -26,11 +26,11 @@
             android:backgroundTint="#000"
             android:layout_gravity="center"
             android:id="@+id/quoteButton"
-            android:text="Refresh"/>
+            android:text="@string/refresh"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="VEHICLES"
+            android:text="@string/vehicles"
             android:gravity="center"
             android:textSize="18sp"
             android:fontFamily="@font/pt"/>

@@ -21,7 +21,7 @@ android:background="@drawable/f1"
             android:layout_width="match_parent"
             android:textSize="18sp"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/textview6"
             android:fontFamily="@font/pt"
             android:padding="16dp"/>
 
@@ -31,14 +31,14 @@ android:background="@drawable/f1"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pt"
             android:textSize="18sp"
-            android:text="TextView"
+            android:text="@string/textview4"
             android:padding="16dp"/>
 
         <TextView
             android:id="@+id/mfridtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/textview3"
             android:textSize="18sp"
             android:fontFamily="@font/pt"
             android:padding="16dp"/>
@@ -47,7 +47,7 @@ android:background="@drawable/f1"
             android:id="@+id/mfrnametext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/textview5"
             android:textSize="18sp"
             android:fontFamily="@font/pt"
             android:padding="16dp"/>
