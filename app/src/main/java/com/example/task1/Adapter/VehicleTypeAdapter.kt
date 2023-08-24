@@ -28,10 +28,8 @@ class VehicleTypeAdapter(var list:List<VehicleType>): RecyclerView.Adapter<Vehic
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        println("called")
         var listData =list[position]
         holder.t1.text=listData.Name
-
 
     }
 }

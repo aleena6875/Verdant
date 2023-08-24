@@ -59,20 +59,21 @@ class Frag2 : Fragment() {
         val mfridtext:TextView=view.findViewById(R.id.mfridtext)
        val mfrnametext:TextView=view.findViewById(R.id.mfrnametext)
         val getdata=arguments?.getParcelable<Result1>("country")
-        commonnametext.text=getdata?.Mfr_CommonName
-        countrytextView.text=getdata?.Country
-        mfridtext.text=getdata?.Mfr_ID.toString()
-        mfrnametext.text=getdata?.Mfr_Name
+        val mfrcname="Mfr_CommonName:${getdata?.Mfr_CommonName}"
+        commonnametext.text=mfrcname
+        val countryname="Country:${getdata?.Country}"
+        countrytextView.text=countryname
+        val mfrid = "Mfr_ID: ${getdata?.Mfr_ID.toString()}"
+        mfridtext.text =mfrid
 
+        val mfrname = "Mfr_Name: ${getdata?.Mfr_Name}"
+        mfrnametext.text = mfrname
         recycler_view.layoutManager = LinearLayoutManager(requireContext())
         var adapter = getdata?.VehicleTypes?.let { VehicleTypeAdapter(it) }
         recycler_view.adapter = adapter
 
 
-//        val recyclerview2:RecyclerView=view.findViewById(R.id.recyclerview2)
-//        recyclerview2.layoutManager=LinearLayoutManager(requireContext())
-//        val adapter= getdata?.VehicleType?.let { VehicleTypeAdapter(it) }
-//        recyclerview2.adapter=adapter
+
     }
 
     companion object {
