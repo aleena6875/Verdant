@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/f1"
     android:id="@+id/navlayout">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,6 +32,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/textview1" />
+
+
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.task1.View
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -16,14 +17,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-
         setContentView(R.layout.activity_main)
-        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, SplashFrag())
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Frag1())
             .commit()
-        Handler(Looper.getMainLooper()).postDelayed({
-            supportFragmentManager.beginTransaction().replace(R.id.fragment_container, Frag1())
-                .commit()
-        }, 3000)
     }
-}
+    }
