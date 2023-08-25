@@ -3,35 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/f1"
     android:id="@+id/navlayout">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="6dp"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/countryTextview"
-            android:layout_width="wrap_content"
-            android:fontFamily="@font/pt"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:layout_weight="1"
-            android:text="@string/textview"
-            />
+        android:orientation="horizontal"
+        android:outlineAmbientShadowColor="@color/white"
+        android:padding="@dimen/spacing_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/commonNameTextView"
             android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            android:fontFamily="@font/pt"
-            android:layout_marginStart="65dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/textview1" />
+            android:fontFamily="@font/pt"
+            android:padding="@dimen/spacing_8dp"
+            android:text="@string/textview1"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/countryTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pt"
+            android:gravity="end"
+            android:padding="@dimen/spacing_8dp"
+            android:text="@string/textview"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>

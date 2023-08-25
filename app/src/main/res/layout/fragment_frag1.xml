@@ -3,36 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/frag1background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".View.Fragments.Frag1">
+    tools:context=".view.fragments.Frag1">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/spacing_16dp">
         <TextView
             android:id="@+id/quoteTextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/random_code_will_appear_here"
             android:textSize="18sp"
+            android:textColor="@color/white"
             android:fontFamily="@font/pt"
             android:gravity="center"
             android:layout_marginBottom="16dp"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#000"
+            android:backgroundTint="@color/splashbackground"
             android:layout_gravity="center"
+            android:textColor="@color/black"
             android:id="@+id/quoteButton"
             android:text="@string/refresh"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/vehicles"
+            android:text="COMMON MANUFACTURES AND THEIR COUNTRIES"
             android:gravity="center"
-            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
             android:fontFamily="@font/pt"/>
 
 
@@ -40,8 +45,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/recycler_view"
+            android:layout_marginBottom="16dp"/>
 
-            android:layout_marginBottom="16sp"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

@@ -1,14 +1,11 @@
-package com.example.task1.Adapter
+package com.example.task1.adapterPackage
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.task1.Model.VehicleType
+import com.example.task1.model.VehicleType
 import com.example.task1.R
 
 
@@ -28,7 +25,7 @@ class VehicleTypeAdapter(var list:List<VehicleType>): RecyclerView.Adapter<Vehic
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var listData =list[position]
+        val listData =list[position]
         holder.t1.text=listData.Name
 
     }

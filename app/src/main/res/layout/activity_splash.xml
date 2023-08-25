@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.SplashActivity"
+    tools:context=".view.SplashActivity"
     android:background="@color/splashbackground">
 
         <ImageView
@@ -12,7 +12,6 @@
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/splash___image"
@@ -28,7 +27,7 @@
             android:layout_height="50dp"
             android:gravity="center_horizontal"
             android:text="@string/verdant"
-            android:textSize="39dp"
+            android:textSize="39sp"
             android:fontFamily="@font/tt"
             app:layout_constraintBottom_toBottomOf="@id/logo"
             app:layout_constraintEnd_toEndOf="@id/logo"
