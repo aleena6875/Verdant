@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -49,6 +50,8 @@ return inflater.inflate(R.layout.fragment_frag1, container, false)
         viewModel = ViewModelProvider(this).get(QuoteViewModel::class.java)
         val quoteTextView: TextView = view.findViewById(R.id.quoteTextview)
         val quoteButton: Button = view.findViewById(R.id.quoteButton)
+        val profileButton:ImageButton=view.findViewById(R.id.profileButton)
+        val logoutButton:ImageButton=view.findViewById(R.id.logoutButton)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
         quoteButton.setOnClickListener { viewModel.getRandomQuotes() }
         viewModel.response.observe(viewLifecycleOwner) { response ->
@@ -62,8 +65,14 @@ return inflater.inflate(R.layout.fragment_frag1, container, false)
             val adapter = VehicleAdapter(result,this)
             recyclerView.adapter = adapter
         }
+        profileButton.setOnClickListener {
+        val frag3=Frag3Profile()
+            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.fragment_container,frag3).commit()
+        }
+        logoutButton.setOnClickListener {
+            val loginFrag=LoginFragment()
+            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.fragment_container,loginFrag).commit()
+        }
     }
-
-
 
 }

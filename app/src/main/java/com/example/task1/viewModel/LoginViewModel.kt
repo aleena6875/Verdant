@@ -11,13 +11,16 @@ import kotlinx.coroutines.launch
 
 class LoginViewModel:ViewModel() {
     val response2= MutableLiveData<Boolean>()
+    val userResponse=MutableLiveData<LoginResponse>()
     val api2= QuoteRetrofit().getLoginInstance().create(QuoteApiInterface::class.java)
     fun logAuth(username:String,password:String)
     {
 val loginData=LoginData(username, password)
         viewModelScope.launch {
             try {
-                response2.value=api2.getLoginData(loginData).isSuccessful
+                val res=api2.getLoginData(loginData)
+                   response2.value=res.isSuccessful
+                userResponse.value=res.body()
             }
             catch (e:Exception){
                 e.printStackTrace()

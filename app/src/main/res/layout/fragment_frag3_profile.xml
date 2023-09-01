@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/textview_background"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.Frag3Profile">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        tools:ignore="MissingConstraints"
+        android:backgroundTint="@color/textview_background"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+    <ImageView
+        android:layout_width="112dp"
+        android:id="@+id/imageView"
+        android:layout_height="120dp"
+        android:src="@color/black"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+       app:layout_constraintTop_toBottomOf="@id/imageView"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/spacing_8dp"
+            android:background="@color/splashbackground"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/idTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_8dp"
+                android:padding="@dimen/spacing_16dp"
+                android:paddingTop="@dimen/spacing_8dp"
+                android:fontFamily="@font/arbutus_slab"
+                android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTextView"
+        android:textSize="20sp"
+        android:padding="@dimen/spacing_16dp"
+        android:fontFamily="@font/arbutus_slab"
+        android:layout_marginBottom="@dimen/spacing_8dp"
+        android:paddingTop="@dimen/spacing_8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:id="@+id/emailTextView"
+            android:textSize="20sp"
+            android:padding="@dimen/spacing_16dp"
+            android:fontFamily="@font/arbutus_slab"
+            android:layout_marginBottom="@dimen/spacing_8dp"
+            android:paddingTop="@dimen/spacing_8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fnameTextView"
+                android:textSize="20sp"
+                android:padding="@dimen/spacing_16dp"
+                android:fontFamily="@font/arbutus_slab"
+                android:layout_marginBottom="@dimen/spacing_8dp"
+                android:paddingTop="@dimen/spacing_8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lnameTextView"
+                android:textSize="20sp"
+                android:padding="@dimen/spacing_16dp"
+                android:fontFamily="@font/arbutus_slab"
+                android:layout_marginBottom="@dimen/spacing_8dp"
+                android:paddingTop="@dimen/spacing_8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/genderTextView"
+                android:textSize="20sp"
+                android:padding="@dimen/spacing_16dp"
+                android:fontFamily="@font/arbutus_slab"
+                android:layout_marginBottom="@dimen/spacing_8dp"
+                android:paddingTop="@dimen/spacing_8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/iTextView"
+                android:textSize="20sp"
+                android:padding="@dimen/spacing_16dp"
+                android:fontFamily="@font/arbutus_slab"
+                android:layout_marginBottom="@dimen/spacing_8dp"
+                android:paddingTop="@dimen/spacing_8dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

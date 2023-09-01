@@ -13,6 +13,7 @@
             android:id="@+id/frag1tofrag2"
             app:destination="@+id/Frag2"/>
     </fragment>
+
     <fragment
         android:id="@+id/Frag2"
         android:name="com.example.task1.view.fragments.Frag2"

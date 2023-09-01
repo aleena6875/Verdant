@@ -1,5 +1,6 @@
 package com.example.task1.view.fragments
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,15 +13,18 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.example.task1.model.LoginResponse
 import com.example.task1.view.MainActivity
 import com.example.task1.viewModel.LoginViewModel
+import com.google.gson.Gson
+import com.google.gson.internal.GsonBuildConfig
 
 
 class LoginFragment : Fragment() {
 
-lateinit var userName:EditText
-lateinit var password: EditText
-lateinit var loginButton:Button
+    lateinit var userName: EditText
+    lateinit var password: EditText
+    lateinit var loginButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -54,7 +58,7 @@ lateinit var loginButton:Button
 
             }
         }
-        loginViewModel.response2.observe(viewLifecycleOwner) {res->
+        loginViewModel.response2.observe(viewLifecycleOwner) { res ->
             if (res) {
                 Toast.makeText(
                     requireContext(),
@@ -71,36 +75,54 @@ lateinit var loginButton:Button
                 ).show()
             }
         }
-    }
-       private fun nonEmptyValidation():Boolean{
-            var res=false
-           if (userName.text.isEmpty()&&password.text.toString().isEmpty())
-           {
-               Toast.makeText(
-                   requireContext(),
-                   "Please enter username and password",
-                   Toast.LENGTH_SHORT
-               ).show()
+
+
+
+        loginViewModel.userResponse.observe(viewLifecycleOwner) { userRes ->
+
+
+           run{
+               storeDataInSharedPreference(userRes)
            }
-           else if(userName.text.isEmpty()) {
-                Toast.makeText(
-                    requireContext(),
-                    "Username cannot be empty",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-            else if(password.text.isEmpty()) {
-                Toast.makeText(
-                    requireContext(),
-                    "Password cannot be empty",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-            else
-                res=true
-            return res
+
 
         }
+    }
+
+    private fun nonEmptyValidation(): Boolean {
+        var res = false
+        if (userName.text.isEmpty() && password.text.toString().isEmpty()) {
+            Toast.makeText(
+                requireContext(),
+                "Please enter username and password",
+                Toast.LENGTH_SHORT
+            ).show()
+        } else if (userName.text.isEmpty()) {
+            Toast.makeText(
+                requireContext(),
+                "Username cannot be empty",
+                Toast.LENGTH_SHORT
+            ).show()
+        } else if (password.text.isEmpty()) {
+            Toast.makeText(
+                requireContext(),
+                "Password cannot be empty",
+                Toast.LENGTH_SHORT
+            ).show()
+        } else
+            res = true
+        return res
+
+    }
+
+    fun storeDataInSharedPreference(data: LoginResponse) {
+        val sharedPreferences =
+            requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val jsondata = Gson().toJson(data)
+        editor.putString("apiData", jsondata)
+        editor.apply()
+    }
 
 
     companion object {
